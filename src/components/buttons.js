@@ -29,12 +29,12 @@ const Buttons = () => {
         setEquation(currentEquation + stringNumber);
     }
     useEffect(() =>{
-        if(equation.includes("+") || equation.includes("-") || equation.includes("*") || equation.includes("/")){
+
            if(Number.isInteger(parseInt(equation.slice(-1)))){
                getAnswer();
            }
             
-         }
+        
     }, [equation]);
     const getAnswer = () => {
         let newAnswer = eval(equation);
